@@ -27,15 +27,19 @@ const Sidebar: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Define menu items
+ 
   const menuItems = [
-    { name: "Overview", icon: world, active: false },
-    { name: "Floods", icon: floods, active: true },
-    { name: "Earthquakes", icon: earthquakes, active: false },
-    { name: "Tsunamis", icon: tsunamis, active: false },
+    { name: "Overview", icon: world, active: true, isCollapsed: true },
+    { name: "Floods", icon: floods, active: false , isCollapsed: true },
+    { name: "Earthquakes", icon: earthquakes, active: false, isCollapsed: true },
+    { name: "Tsunamis", icon: tsunamis, active: false , isCollapsed: true},
     { name: "Volcanoes", icon: volcanoes, active: false },
     { name: "Wildfires", icon: wildfires, active: false },
+
+  
   ];
+
+
 
   const footerItems = [
     { name: "Help", icon: "fas fa-question-circle", link: "#" },
@@ -66,6 +70,8 @@ const Sidebar: React.FC = () => {
         <div className="w-6 h-1 bg-white"></div>
         <div className="w-6 h-1 bg-white"></div>
         <div className="w-6 h-1 bg-white"></div>
+
+       
       </button>
 
         <ul className="space-y-8">
